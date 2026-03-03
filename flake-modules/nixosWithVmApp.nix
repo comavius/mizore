@@ -5,9 +5,9 @@
   inputs,
   ...
 }: let
-  cfg = config.mizore.nixosConfigurationsWithVmApp;
+  cfg = config.mizore.nixosWithVmApp;
 in {
-  options.mizore.nixosConfigurationsWithVmApp = lib.mkOption {
+  options.mizore.nixosWithVmApp = lib.mkOption {
     default = {};
     description = "NixOS system configurations with corresponding VM apps.";
     type = lib.types.attrsOf (lib.types.submodule {
