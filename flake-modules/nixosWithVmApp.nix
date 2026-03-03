@@ -20,6 +20,11 @@ in {
           type = lib.types.deferredModule;
           description = "The NixOS module to use for this system.";
         };
+        vmOnlyModule = lib.mkOption {
+          type = lib.types.deferredModule;
+          description = "An optional NixOS module that is only included in the VM configuration.";
+          default = {};
+        };
       };
     });
   };
