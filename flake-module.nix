@@ -1,5 +1,3 @@
-{
-  flakeModule = { ... }: {
-    imports = [ ./flake-modules/nixosWithVmApp.nix ];
-  };
+{ ... }: {
+  imports = [ ./flake-modules/nixosWithVmApp.nix ];
 }
