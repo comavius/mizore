@@ -50,6 +50,7 @@ in {
               system = attrs.system;
               modules = [
                 attrs.module
+                attrs.vmOnlyModule
                 ({modulesPath, ...}: {
                   imports = [
                     (modulesPath + "/virtualisation/qemu-vm.nix")
