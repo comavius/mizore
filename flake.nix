@@ -13,6 +13,9 @@
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = import inputs.systems;
 
-      flake.flakeModules.default = import ./flake-module.nix;
+      flake.flakeModules = {
+        default = import ./flake-module.nix;
+        nixosWithVmApp = import ./flake-modules/nixosWithVmApp.nix;
+      };
     };
 }
